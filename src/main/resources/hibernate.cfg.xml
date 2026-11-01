@@ -22,7 +22,7 @@
         <property name="hbm2ddl.auto">validate</property>
 
         <!-- 5. Entidades -->
-        <mapping class="com.mycompany.holonet.Planeta"/>
-        <mapping class="com.mycompany.holonet.Nave"/>
+        <mapping class="com.mycompany.Labholonet.Planeta"/>
+        <mapping class="com.mycompany.Labholonet.Nave"/>
     </session-factory>
 </hibernate-configuration>
