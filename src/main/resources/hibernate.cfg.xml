@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- 1. Conexión -->
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/alianza_rebelde</property>
+        <property name="connection.username">openpg</property>
+        <property name="connection.password">openpgpwd</property>
+
+        <!-- 2. Dialecto -->
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <!-- 3. Depuración: muestra el SQL generado (útil para ver el JOIN FETCH) -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+
+        <!-- 4. Las tablas las crea el script SQL, así que solo se valida el mapeo -->
+        <property name="hbm2ddl.auto">validate</property>
+
+        <!-- 5. Entidades -->
+        <mapping class="com.mycompany.holonet.Planeta"/>
+        <mapping class="com.mycompany.holonet.Nave"/>
+    </session-factory>
+</hibernate-configuration>
